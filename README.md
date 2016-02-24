@@ -1,5 +1,4 @@
-# Starter Files V 3.1.0
-Based on Nathan Searles [Day One Gulp Starter Kit](https://github.com/nathansearles/Day-One-Gulp-Starter-Kit)
+# Mozilla surveillance
 
 ## Installing
 1. Install NodeJS by downloading it [here](http://nodejs.org/download/)
