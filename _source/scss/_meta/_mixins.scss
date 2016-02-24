@@ -1,0 +1,104 @@
+/* ==========================================================================
+  Mixins
+========================================================================== */
+
+
+/*==========  SETUP BREAKPOINTS  ==========*/
+
+@mixin breakpoint($point) {
+  @if $point == x-small {
+    @media ( min-width: $x-small )  { @content; }
+  }
+  @else if $point == small {
+    @media ( min-width: $small )  { @content; }
+  }
+  @else if $point == medium {
+    @media ( min-width: $medium ) { @content; }
+  }
+  @else if $point == large {
+    @media ( min-width: $large ) { @content; }
+  }
+  @else if $point == x-large {
+    @media ( min-width: $x-large ) { @content; }
+  }
+}
+
+
+
+/*==========  FONTS  ==========*/
+
+@mixin font-regular() {
+  font-family: $font-regular;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font-highlight() {
+  font-family: $font-highlight;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font-bold() {
+  font-family: $font-bold;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + '.eot');
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+    url($file-name + '.woff2') format('woff2'),
+    url($file-name + '.woff') format('woff'),
+    url($file-name + '.ttf')  format('truetype'),
+    url($file-name + '.svg##{$font-name}')  format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+
+@mixin font-size($size-value: $font-base) {
+  font-size: ($size-value * 1) + px;
+  font-size: ($size-value / $font-base) + rem;
+}
+
+
+
+/*==========  UTILITIES  ==========*/
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@mixin v-align() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin placeholder($color) {
+  &:-moz-placeholder { color: $color; }
+  &::-moz-placeholder { color: $color; }
+  &:-ms-input-placeholder { color: $color; }
+  &::-webkit-input-placeholder { color: $color; }
+}

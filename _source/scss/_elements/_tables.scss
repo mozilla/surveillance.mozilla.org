@@ -1,0 +1,57 @@
+/* ==========================================================================
+  Tables
+========================================================================== */
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table--responsive {
+  width: 100%;
+  margin-bottom: 15px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: 1px solid #ddd;
+
+  .table {
+    margin-bottom: 0;
+    background-color: #fff;
+
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        th, td {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(medium) {
+  .table--responsive {
+    width: auto;
+    margin-bottom: inherit;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: none;
+
+    .table {
+      margin-bottom: inherit;
+      background-color: inherit;
+
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          th, td {
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+}
