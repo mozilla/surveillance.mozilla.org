@@ -1,0 +1,10 @@
+.DS_Store
+.sass-cache
+*.scssc
+/bower_components/*
+/node_modules/*
+*.sublime-workspace
+/_source/*
+package.json
+gulpfile.js
+bower.json
