@@ -1,6 +1,6 @@
 # Mozilla Surveillance
 
-### **Just the site files**
+### Just the site files - ignore build instructions
 
 ## Installing
 1. Install NodeJS by downloading it [here](http://nodejs.org/download/)
