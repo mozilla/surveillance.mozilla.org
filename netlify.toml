@@ -5,4 +5,4 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Cache-Control = "public, max-age=86400"
-    Content-Security-Policy = "default-src 'self' www.google-analytics.com;"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' www.google-analytics.com;"
